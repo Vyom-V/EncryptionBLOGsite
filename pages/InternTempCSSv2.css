@@ -1,0 +1,435 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+  }
+/* --------------------------------- */
+header{
+    position: sticky; top: 0px;
+}
+/*----------------- top navigation bar----------- */
+.navbar {
+    box-sizing: border-box;
+    height: 9vh;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 2;
+    background-color: #222831;
+    /* background-image: linear-gradient(to right, rgb(255, 145, 0), red, #33374d,#211d4b,#20195c); */
+    transition: all 0.3s ease-in;
+    color: #f1f1f1;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin-right: 20px;
+    font-family:'Arial Narrow Bold', sans-serif;
+    padding: 10px;
+    border-radius: 5px;
+}
+.navbar ul li:hover{
+    background-color: rgba(0, 0, 0, 0.863) ;
+    color: yellow;
+}
+
+/*-----------second naviation bar---------------*/
+.nav {
+    box-sizing: border-box;
+    width: 100%;
+    height: 7vh;
+    background-color: #393E46;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.63);
+    /* background-image:linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); */
+    /* background-image:linear-gradient(to right,orange,red,rgb(117, 2, 89),purple); */
+    /* background-image:linear-gradient(to right, #B3CFDA,#C1E7B8,#EBE5BB,#F6BFC7,#EEA7CC,#C396CB); */
+}
+
+
+/* -----drop box for mobile starts----- */
+.drop {
+    display: none;
+    height: 6vh;
+    width: 4vw;
+    text-align: center;
+}
+
+.nav .drop li { 
+    padding-top: 1.3vh;
+    margin-left:15px ;
+    padding-bottom: 1vh;
+    list-style-type: none;
+    font-size: 1.4vh;
+    height: 4vh;
+    float:left;
+    font-family: 'Source Sans Pro', roboto, sans-serif;
+}
+.dropbtn {
+    background-color: #393E46;
+    color: white;
+    font-size: auto;
+    border: none;
+    cursor: pointer;
+}
+.arrow{
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+.dropcontent {
+    position: relative;
+    top: 35%;
+    display: none;
+    background-color: #fff;
+    color: #33374d;
+    z-index: 3;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.dropcontent a {
+    padding: 5px;
+    display: block;
+    width: 17.5vw; /*THIS VALUE WORKS FOR SHADOW*/
+    height: 20px;
+    /* border-bottom: 1px dotted rgb(61, 60, 60); Doesnt look good */
+}
+.dropcontent a:hover{
+    background-color: #ddd;
+}
+.dropbtn:hover .dropcontent {
+    display: block;
+    background-color: #f1f1f1;
+}
+
+/* -----drop box for mobile ends------ */
+
+#navbutton{
+    position: absolute;
+    left: 0 ;
+    background-color: #393E46;
+    color: #9ad8eb;
+    transition: all 0.3s ease-in;
+    border-right: 2px solid #9ad8eb ;
+    border-top: 2px solid #9ad8eb ;
+    border-bottom: 2px solid #9ad8eb ;
+    border-radius: 5px;
+    transform: translateX(-0.8vw);
+}
+#navbutton:hover{
+    color: rgb(255, 255, 0); 
+    border-right: 2px solid yellow ;
+    border-top: 2px solid yellow ;
+    border-bottom: 2px solid yellow ;
+    transform: scale(1.1);  
+    background-color: rgb(31, 30, 30);  
+}
+
+.nav ul {
+    display: flex;
+    justify-content: flex-end;
+    /* justify-content: space-evenly; */
+    text-align: center;
+}
+
+.nav ul li {
+    font-family: 'Source Sans Pro', roboto, sans-serif;
+    text-align: center;
+    /* margin: 2vw; */
+    display: inline-block;
+    height: 6vh;
+    width: auto;
+    padding: 0 1.7vw 0px 1.7vw;
+    font-size: 2vw;
+    color: #f1f1f1;
+    letter-spacing: 1px;
+    transition: all 0.2s ease-in;
+    vertical-align: center;
+}
+/* ----TRY,".active", to highlight current page thats active----*/
+.nav ul li:hover {
+    color: yellow;
+    background-color: #1e1f27e5;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.23);
+    transform: scale(1);  
+}
+
+h1 {
+    font-family: roboto, sans-serif;
+    margin: 7px;
+}
+h2{
+    font-family: roboto, sans-serif;
+    margin: 7px;
+}
+a{
+    text-decoration: none;
+    color: #33374d;
+}
+hr {
+    border: 2px solid #1e1f27e5;
+    display: block;
+    unicode-bidi: isolate;
+    margin-inline-start: 4px;
+    margin-inline-end: 4px;
+}
+
+p {
+    font-family: roboto, sans-serif;
+    margin: 7px;
+}
+
+.navtab {
+/*-------side navigator-------*/
+    overflow: scroll;
+    position: sticky;
+    top: 17vh;
+    background-color: #EEEEEE;
+    /* width: 19vw; */
+    width: 0;
+    height: 81.5vh;
+    z-index: 0;
+    display: flex;
+    /* display: none; */
+    flex-direction: column;
+    transition: all 0.5s ease-in-out;
+}
+
+.head {
+    display: block;
+    width: auto;
+    height: 70px;
+    border-bottom: 1px dotted #9ad8eb;
+    font-size: 1.5vw;
+    color:#fff;
+    background-color: #00ADB5;
+    text-align: center;
+}
+.head h3{
+ font-size: auto;
+ font-family: roboto, sans-serif;
+ padding-left: 1vw;
+ padding-bottom: 4px;
+}
+
+.navtab ul li {
+    font-size: large;
+    width: auto;
+    height: 5vh;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block; 
+}
+.navtab ul li:last-child{
+    position: absolute;
+    bottom: 0%;
+    text-shadow: 2px 2px 4px #3043528e;
+}
+.navtab ul li a{
+    display: block;
+    width: auto;
+    height: 5vh;
+    color: #304352;
+    top: 20vh;
+    padding: 1vh;
+    padding-left: 2vh;
+}
+ .navtab ul li a:hover{  
+    color: #fff;
+    background-color: #304352;
+    overflow: visible;
+    height: auto;
+}
+
+.navtab ul li:hover {
+    /* background-color: rgba(123, 187, 212, 0.863); */
+    background-color: #393E46;
+    color: white;
+    overflow: visible;
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+/*---shadow syntax variables: offset-x | offset-y | blur-radius | spread-radius | color---*/
+}
+/*-------side navigator ends-------*/
+
+.container {
+    width:100%;
+    display: flex;
+}
+/*------------------------ display area------------------------ */
+.area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* -------------------image heading------------------- */
+.heading{
+    display: flex;
+    /* width:79vw; */
+    width: 98vw;
+    height: 40vw;
+    min-width: 500px;
+    background-image: url("coding.jpg");
+    background-attachment: fixed; /* this fixes the bg*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Wulkan display',sans-serif;
+    transition: all 0.5s ease-in-out;
+}
+.heading h1{
+    color: #fff;
+    font-size: 5vw;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(189, 14, 224, 0.4), -2px -2px 4px rgba(224, 221, 14, 0.35);
+}
+/* -------------------image heading ends------------------- */
+
+.content {
+    margin: 4vw;
+    margin-top: 2vw;
+    background-color: #fff;
+    /* width: 71vw; */
+    width: 91vw;
+    height: auto;
+    padding-bottom: 30vh;
+    margin-bottom: 10vh;
+    transition: all 0.5s ease-in-out;
+    max-width: 820px;
+}
+
+.content h1 {
+    background-color: #d7d2cc;
+    padding: 2vh;
+    margin: 4vh;
+    border-bottom: 1px dotted #aaa;
+    font-size: 4vw;
+}
+.content h2 {
+    padding: 2vh;
+    font-size: 3.2vw;
+    margin: 4vh;
+    border-bottom: 1px dotted #aaa;
+}
+.content h3 {
+    padding: 2vh;
+    font-size: 2.5vw;
+    margin: 4vh;
+    margin-left: 8vh;
+    border-bottom: 1px dotted #aaa;
+}
+
+.content p {
+    font-size: 2vw;
+    margin: 4vh;
+    margin-left: 40px;
+}
+.refimg{
+    box-sizing: border-box;
+    width:400px;
+    height: auto;
+}
+.ConList{
+    border-left: 3px solid rgba(35, 35, 82, 0.623);
+    margin-left: 5vw;
+    border-radius: 5px;
+}
+.ConList li{ 
+    padding: 1vh 2vw 1vh 0;
+    font-size: 1.8vw;
+    margin-left: 4vw;
+    font-family: roboto, sans-serif;
+}
+/* ---Footer,use when bug is fixed--- */
+.foot {
+    bottom: 0;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    height: 10vh;
+    color: white;
+    background-color: black;
+    z-index: 0;
+}
+
+/*---------Media Qeuries for smartphone---------*/
+@media (max-width: 530px) {
+    .navbar{
+        height:6vh;
+    }
+    .nav{
+        display: block;
+    }
+    .nav ul li {
+        display: none;
+    }
+    .drop {
+        display: inline-block;
+        justify-self: left;
+    }
+
+    .navtab {
+        display: none;
+    }
+    .heading{
+        min-width: 100vw;
+        height: 66vw;
+    }
+    .heading h1{
+        font-size: 5.5vw;
+    }
+    .content {  
+        width: 92vw;
+    }
+    .content h1{
+        background-color: #3a4c5a;
+        padding: 3vh;
+        color: #f1f1f1;
+    }
+    .content p {
+        font-size: 3vw;
+        margin: 2vh 4vh 2vh 4vh;
+    }
+    .content h2 {
+        padding: 1vh 2vh 1vh 1vh;
+        font-size: 3vw;
+        margin: 2vh 4vh 2vh 4vh;
+    }
+    .content h3 {
+        padding: 1vh 2vh 1vh 1vh;
+        font-size: 2.5vw;
+        margin: 2vh 4vh 2vh 5vh;
+    }
+    .ConList{
+        margin-left: 9vw;
+    }
+    .ConList li {
+        padding: 1vw 15vw 1vw 0;
+        margin-left: 4vh;
+        font-size: 2.5vw;
+    }
+    .refimg{
+        max-width: 80vw;
+    }
+    /* vyoms media queries */
+	/* label + .menu {
+		display:none;
+	}
+	
+	header .mobil-menu {
+		display: block;
+	} */
+}
