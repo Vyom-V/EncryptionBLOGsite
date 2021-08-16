@@ -49,42 +49,59 @@
 
 <body>
     <header>
-        <div class="navbar">
-            <ul>
-                <li>ICON</li>
-                <li>HOME</li>
-                <li>ABOUT</li>
-                <li>CONTACT</li>
-            </ul>
+       <!-- colleagues top navbar -->
+       <nav id="navv" class="navigation h-nav" style="height:10vh">
+        <div class="logo nav-logo v-class">
+            <img class="logoimg" src="logo.png" alt="">
         </div>
-        <!-- second nav bar starts -->
-        <div class="nav">
-            <div class="drop">
-                <!-- dropdown menu for mobile site -->
-                <li id="btn" class="dropbtn">ENCYRPTION TECHNIQUES <i class="arrow"></i>
-                    <div class="dropcontent">
-                        <a href="AES.html">AES</a>
-                        <a href="#">FSE</a>
-                        <a href="#">DES</a>
-                        <a href="Blowfish.html">BLOWFISH</a>
-                        <a href="#">TWOFISH</a>
-                        <a href="#">RSA</a>
-                        <a href="sha.html">SHA-1</a>
-                    </div>
-                </li>
-                <!-- dropdown ends -->
-            </div>
-            <ul style=" list-style-type: none;">
-                <li id="navbutton" onclick="navButn()">&equals;</li>
-                <a href="AES.html"><li>AES</li></a>
-                <a href=""><li>FSE</li></a>
-                <a href=""><li>DES</li></a>
-                <a href="Blowfish.html"><li>BLOWFISH</li></a>
-                <a href="Twofish.html"><li>TWOFISH</li></a>
-                <a href=""><li>RSA</li></a>
-                <a href="sha.html"><li>SHA-1</li></a>
-            </ul>
+      <ul class="nav-list v-class">
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="AES.html">Learn Algorithm</a></li>
+        <li><a href="about">About</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+      <div class="burger" onclick="menuu()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </nav>
+<!-- my placeholder top navbar -->
+
+    <!-- <div class="navbar">
+        <ul>
+            <li>ICON</li>
+            <li>HOME</li>
+            <li>ABOUT</li>
+            <li>CONTACT</li>
+        </ul>
+    </div> -->
+    <!-- second nav bar starts -->
+    <div class="nav">
+        <div class="drop">
+            <!-- dropdown menu for mobile site -->
+            <li id="btn" class="dropbtn">ENCYRPTION TECHNIQUES <i class="arrow"></i>
+                <div class="dropcontent">
+                    <a href="AES.html">AES</a>
+                    <a href="FPE.html">FPE</a>
+                    <a href="DesTdes.html">DES</a>
+                    <a href="Blowfish.html">BLOWFISH</a>
+                    <a href="Twofish.html">TWOFISH</a>
+                    <a href="sha.html">SHA-1</a>
+                </div>
+            </li>
+            <!-- dropdown ends -->
         </div>
+        <ul style=" list-style-type: none;">
+            <li id="navbutton" onclick="navButn()">&equals;</li>
+            <a href="AES.html"><li>AES</li></a>
+            <a href="FPE.html"><li>FPE</li></a>
+            <a href="DesTdes.html"><li>DES</li></a>
+            <a href="Blowfish.html"><li>BLOWFISH</li></a>
+            <a href="Twofish.html"><li>TWOFISH</li></a>
+            <a href="sha.html"><li>SHA-1</li></a>
+        </ul>
+    </div>
     </header>
 
     <div>
@@ -227,5 +244,6 @@
     </footer>
 
 </body>
+<script src="homenav.js"></script> 
 
 </html>
